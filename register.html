@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src = 'script.js' defer></script>
+<script src = 'form.js' defer></script>
     <title>Xino</title>
     <link rel="stylesheet" href="register.css">
 </head>
@@ -30,7 +30,8 @@
         <a href="log_in.html" class="button">Log In</a>
         <div class="register">
             <form action="">
-                    <h2>School Details</h2>
+                    <div id="step1" class="step">
+                        <h2>School Details</h2>
                 <input type="text" placeholder="School / Team Name">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
@@ -71,7 +72,60 @@
                     <input type="checkbox" name="event" id="">
                     <label>Non</label>
                 </span>
-                <button class="form-btn">Register</button>
+                <button class="form-btn" type="button" id="next1">Next</button>
+            </div>
+
+            <div id="step2" class="step inactive">
+                <h2>Lorem</h2>
+                <div class="member-1">
+                    <h3>Member 1 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="member-2">
+                    <h3>Member 2 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="form-btn" type="button" id="prev2">Previous</button>
+                <button class="form-btn" type="button" id="next2">Next</button>    
+            </div>
+            
+            <div id="step3" class="step inactive">
+                <h2>Ipsum</h2>
+                <div class="member-1">
+                    <h3>Member 1 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="member-2">
+                    <h3>Member 2 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="form-btn" type="button" id="prev3">Previous</button>
+                <button class="form-btn" type="button" id="next3">Next</button>    
+            </div>
+            <div id="step4" class="step inactive">
+                <h2>Dolor</h2>
+                <div class="member-1">
+                    <h3>Member 1 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="member-2">
+                    <h3>Member 2 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="member-3">
+                    <h3>Member 3 details</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="form-btn" type="button" id="prev4">Previous</button>
+                <button class="form-btn" type="submit">Submit</button>    
+            </div>
             </form>
         </div>
     </main>
