@@ -198,6 +198,12 @@ input[type='password']{
     display: block;
     margin-block: 1rem;
 }
+input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+input[type="password"]:not(:placeholder-shown){
+    border-bottom:2px solid var(--light-green);
+    outline: 0;
+}
 input[type="text"]:is(:hover,:focus),
 input[type="email"]:is(:hover,:focus),
 input[type="password"]:is(:hover,:focus){
@@ -238,4 +244,14 @@ form{
 }
 .form-btn:hover::after{
     transform: scaleX(1);
+}
+.step:not(.inactive){
+    transform: scale(1);
+    transition: transform 250ms;
+    display:block;
+}
+.inactive{
+    display: none;
+    transform: scale(0);
+    transition:transform 250ms;
 }
