@@ -198,12 +198,6 @@ input[type='password']{
     display: block;
     margin-block: 1rem;
 }
-input[type="text"]:not(:placeholder-shown),
-input[type="email"]:not(:placeholder-shown),
-input[type="password"]:not(:placeholder-shown){
-    border-bottom:2px solid var(--light-green);
-    outline: 0;
-}
 input[type="text"]:is(:hover,:focus),
 input[type="email"]:is(:hover,:focus),
 input[type="password"]:is(:hover,:focus){
@@ -246,12 +240,26 @@ form{
     transform: scaleX(1);
 }
 .step:not(.inactive){
-    transform: scale(1);
-    transition: transform 250ms;
+    opacity: 1;
+  transform:scale(1);
+    animation: fadeIn 500ms ease;
     display:block;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform:scale(0);
+  }
+  to {
+    opacity: 1;
+    transform:scale(1);
+  }
+}
+
 .inactive{
     display: none;
-    transform: scale(0);
-    transition:transform 250ms;
+    opacity: 0;
+  transform:scale(0);
 }
+
